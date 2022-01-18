@@ -222,7 +222,7 @@
                   <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" placeholder="Klik Disini">
                 </div>
                 <div class="form-group">
-                  <label for="nama_barang" style="margin-left:220px;display:inline;">Lokasi</label>
+                  <label for="lokasi" style="margin-left:220px;display:inline;">Lokasi</label>
                   <select class="form-control" name="lokasi" style="margin-left:75px;width:20%;display:inline;">
                     <option value="">-- Pilih --</option>
                     <option value="Aceh">Aceh</option>
@@ -261,9 +261,9 @@
                   <label for="delivery_order" style="margin-left:220px;display:inline;">Delivery Order</label>
                   <input style="margin-left:25px;width:20%;display:inline;" class="form-control" id="delivery_order" placeholder="Delivery Order">
                 </div>
-                <div class="form-group" style="display:inline-block;">
-                  <label for="kode_barang" style="width:87%;margin-left: 2px;">Stock Perangkat</label>
-                  <select class="form-control" name="kode_barang" style="width:87%;margin-right: 25px;">
+                <div class="form-group">
+                  <label for="tipe_barang" style="margin-left:220px;display:inline;">Tipe Perangkat</label>
+                  <select class="form-control" name="tipe_barang" style="margin-left:23px;width:20%;display:inline;">
                     <option value="">-- Pilih --</option>
                     <option value="PC">PC</option>
                     <option value="Mini PC">Mini PC</option>
@@ -276,12 +276,16 @@
                   </select>
                 </div>
                 <div class="form-group" style="display:inline-block;">
+                  <label for="nama_Barang" style="width:73%;">Nama Barang</label>
+                  <input type="text" name="nama_barang" style="width:90%;margin-right: 67px;" class="form-control" id="nama_Barang" placeholder="Nama Barang">
+              </div>
+              <div class="form-group" style="display:inline-block;">
                   <label for="serial_number" style="width:73%;">Serial Number</label>
                   <input type="text" name="serial_number" style="width:90%;margin-right: 67px;" class="form-control" id="serial_number" placeholder="Serial Number">
               </div>
-                <div class="form-group" style="display:inline-block;">
-                  <label for="nama_Barang" style="width:73%;">Nama Barang</label>
-                  <input type="text" name="nama_barang" style="width:90%;margin-right: 67px;" class="form-control" id="nama_Barang" placeholder="Nama Barang">
+              <div class="form-group" style="display:inline-block;">
+                  <label for="nomor_aset" style="width:50%;">Nomor Aset</label>
+                  <input type="text" name="nomor_aset" style="width:70%;margin-right: 5px" class="form-control" id="nomor_aset" placeholder="Nomor Aset">
               </div>
 
               <!--
@@ -300,14 +304,13 @@
                 <label for="jumlah" style="width:73%;margin-left:5px;">Jumlah</label>
                 <input type="number" name="jumlah" style="width:41%;margin-left:5px;margin-right:18px;" class="form-control" id="jumlah">
             </div>
-            <div class="form-group" style="display:inline-block;">
-              <button type="reset" class="btn btn-basic" name="btn_reset" style="width:95px;margin-left:-70px;"><i class="fa fa-eraser" aria-hidden="true"></i> Reset</button>
-            </div>
+
               <!-- /.box-body -->
               <div class="box-footer" style="width:93%;">
                 <a type="button" class="btn btn-default" style="width:10%;margin-right:26%" onclick="history.back(-1)" name="btn_kembali"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a>
-                <a type="button" class="btn btn-info" style="width:14%;margin-right:29%" href="<?=base_url('admin/tabel_barangmasuk')?>" name="btn_listbarang"><i class="fa fa-table" aria-hidden="true"></i> Lihat List Barang</a>
-                <button type="submit" style="width:20%" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
+                <a type="button" class="btn btn-info" style="width:14%;margin-right:50%;margin-left:-245px;" href="<?=base_url('admin/tabel_barangmasuk')?>" name="btn_listbarang"><i class="fa fa-table" aria-hidden="true"></i> Lihat List Barang</a>
+                <button type="reset" class="btn btn-basic" name="btn_reset" style="width:95px;margin-left:-170px;"><i class="fa fa-eraser" aria-hidden="true"></i> Reset</button>
+                <button type="submit" style="width:20%;margin-left:20px;" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
               </div>
             </form>
           </div>
@@ -347,7 +350,7 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+      <b>Version</b> 1.0.1 (Project Magang)
     </div>
     <strong>Copyright &copy; <?=date('Y')?></strong>
   </footer>

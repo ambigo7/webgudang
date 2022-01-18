@@ -30,6 +30,10 @@
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="<?php echo base_url('assets/inputbarang/js/custom-detail-order.js');?>" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    $('#alert').html(response.alert).fadeIn().delay(3000).fadeout()
+  </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -199,7 +203,7 @@
             <form action="<?=base_url('admin/proses_databarang_masuk_insert')?>" role="form" method="post">
 
               <?php if($this->session->flashdata('msg_berhasil')){ ?>
-                <div class="alert alert-success alert-dismissible" style="width:91%">
+                <div class="alert alert-success alert-dismissible" style="width:86%">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
                </div>

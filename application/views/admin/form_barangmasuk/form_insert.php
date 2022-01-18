@@ -259,15 +259,11 @@
                 </div>
                 <div class="form-group">
                   <label for="delivery_order" style="margin-left:220px;display:inline;">Delivery Order</label>
-                  <input name="do[1]" maxlength="2" style="margin-left:25px;width:5%;display:inline;" class="delivery-order form-control">
-                  <input name="do[2]" maxlength="2" style="margin-left:25px;width:5%;display:inline;" class="delivery-order form-control">
-                  <input name="do[3]" maxlength="3" style="margin-left:25px;width:5%;display:inline;" class="delivery-order form-control">
-                  <input name="do[4]" maxlength="1" style="margin-left:25px;width:5%;display:inline;" class="delivery-order form-control">
-                  <input name="do[5]" maxlength="3" style="margin-left:25px;width:5%;display:inline;" class="delivery-order form-control">
+                  <input style="margin-left:25px;width:20%;display:inline;" class="form-control" id="delivery_order" placeholder="Delivery Order">
                 </div>
                 <div class="form-group" style="display:inline-block;">
                   <label for="kode_barang" style="width:87%;margin-left: 2px;">Stock Perangkat</label>
-                  <select class="form-control" name="kode_barang" style="width:87%;margin-right: 15px;">
+                  <select class="form-control" name="kode_barang" style="width:87%;margin-right: 25px;">
                     <option value="">-- Pilih --</option>
                     <option value="PC">PC</option>
                     <option value="Mini PC">Mini PC</option>
@@ -280,23 +276,29 @@
                   </select>
                 </div>
                 <div class="form-group" style="display:inline-block;">
+                  <label for="serial_number" style="width:73%;">Serial Number</label>
+                  <input type="text" name="serial_number" style="width:90%;margin-right: 67px;" class="form-control" id="serial_number" placeholder="Serial Number">
+              </div>
+                <div class="form-group" style="display:inline-block;">
                   <label for="nama_Barang" style="width:73%;">Nama Barang</label>
                   <input type="text" name="nama_barang" style="width:90%;margin-right: 67px;" class="form-control" id="nama_Barang" placeholder="Nama Barang">
               </div>
 
+              <!--
                 <div class="form-group" style="display:inline-block;">
                   <label for="satuan" style="width:73%;">Satuan</label>
                   <select class="form-control" name="satuan" style="width:110%;margin-right: 18px;">
                     <option value="" selected="">-- Pilih --</option>
-                    <?php foreach($list_satuan as $s){ ?>
-                    <option value="<?=$s->kode_satuan?>"><?=$s->nama_satuan?></option>
-                    <?php } ?>
+                    <?php //foreach($list_satuan as $s){ ?>
+                    <option value="<?//=$s->kode_satuan?>"><?///=$s->nama_satuan?></option>
+                    <?php //} ?>
                   </select>
               </div>
+              -->
 
               <div class="form-group" style="display:inline-block;">
-                <label for="jumlah" style="width:73%;margin-left:33px;">Jumlah</label>
-                <input type="number" name="jumlah" style="width:41%;margin-left:34px;margin-right:18px;" class="form-control" id="jumlah">
+                <label for="jumlah" style="width:73%;margin-left:5px;">Jumlah</label>
+                <input type="number" name="jumlah" style="width:41%;margin-left:5px;margin-right:18px;" class="form-control" id="jumlah">
             </div>
             <div class="form-group" style="display:inline-block;">
               <button type="reset" class="btn btn-basic" name="btn_reset" style="width:95px;margin-left:-70px;"><i class="fa fa-eraser" aria-hidden="true"></i> Reset</button>

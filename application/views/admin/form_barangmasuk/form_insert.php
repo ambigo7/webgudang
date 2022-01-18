@@ -259,7 +259,7 @@
                 </div>
                 <div class="form-group">
                   <label for="delivery_order" style="margin-left:220px;display:inline;">Delivery Order</label>
-                  <input style="margin-left:25px;width:20%;display:inline;" class="form-control" id="delivery_order" placeholder="Delivery Order">
+                  <input style="margin-left:25px;width:20%;display:inline;" name="delivery_order" class="form-control" id="delivery_order" placeholder="Delivery Order">
                 </div>
                 <div class="form-group">
                   <label for="tipe_barang" style="margin-left:220px;display:inline;">Tipe Barang</label>
@@ -277,16 +277,16 @@
                 </div>
                 <div class="form-group" style="display:inline-block;">
                   <label for="nama_Barang" style="width:73%;">Nama Barang</label>
-                  <input type="text" name="nama_barang" style="width:90%;margin-right: 40px;" class="form-control" id="nama_Barang" placeholder="Nama Barang">
+                  <input type="text" name="nama_barang" style="width:90%;margin-right:60px;" class="form-control" id="nama_Barang" placeholder="Nama Barang">
               </div>
               <div class="form-group" style="display:inline-block;">
-                  <label for="serial_number" style="width:73%;">Serial Number</label>
-                  <input type="text" name="serial_number" style="width:90%;margin-right: 67px;" class="form-control" id="serial_number" placeholder="Serial Number">
+                  <label for="serial_number" style="width:73%;margin-left:89px;">Serial Number</label>
+                  <input type="text" name="serial_number" style="width:90%;margin-right: 67px;margin-left: 89px;" class="form-control" id="serial_number" placeholder="Serial Number">
               </div>
 
               <div class="form-group" style="display:inline-block;">
-                  <label for="deskripsi" style="width:50%;">Nomor Aset</label>
-                  <input type="text" name="deskripsi" style="width:90%;margin-right: -35px" class="form-control" id="deskripsi" placeholder="Deskripsi Barang">
+                  <label for="nomor_aset" style="width:50%;margin-left: 130px;">Nomor Aset</label>
+                  <input type="text" name="nomor_aset" style="width:90%;margin-right: -35px;margin-left: 130px;" class="form-control" id="nomor_aset" placeholder="Nomor Aset">
               </div>
 
               <!--
@@ -301,14 +301,16 @@
               </div>
               -->
 
-              <div class="form-group" style="display:inline-block;">
-                  <label for="deskripsi_barang" style="width:50%;">Deskripsi Barang</label>
-                  <textarea name="deskripsi_barang" rows="3" style="width:90%;margin-right: 67px;" class="form-control" id="deskripsi_barang"></textarea>
-              </div>
-
-              <div class="form-group" style="display:inline-block;">
+              <!--
+            <div class="form-group" style="display:inline-block;">
                 <label for="jumlah" style="width:73%;margin-left:5px;">Jumlah</label>
                 <input type="number" name="jumlah" style="width:41%;margin-left:5px;margin-right:18px;" class="form-control" id="jumlah">
+            </div>
+                  -->
+            
+            <div class="form-group" style="">
+                  <label for="deskripsi_barang" style="width:50%;">Deskripsi Barang</label>
+                  <textarea name="deskripsi_barang" rows="3" style="width: 86%;margin-right: 67px;" class="form-control" id="deskripsi_barang"></textarea>
             </div>
 
               <!-- /.box-body -->

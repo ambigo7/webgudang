@@ -294,28 +294,35 @@ class Admin extends CI_Controller{
   public function proses_databarang_masuk_insert()
   {
     $this->form_validation->set_rules('lokasi','Lokasi','required');
-    $this->form_validation->set_rules('kode_barang','Kode Barang','required');
+    $this->form_validation->set_rules('delivery_order','Delivery Order','required');
+    $this->form_validation->set_rules('tipe_barang','Tipe Barang','required');
     $this->form_validation->set_rules('nama_barang','Nama Barang','required');
-    $this->form_validation->set_rules('jumlah','Jumlah','required');
+    $this->form_validation->set_rules('serial_number','Serial Number','required');
+    $this->form_validation->set_rules('nomor_aset','Nomor Aset','required');
+    //$this->form_validation->set_rules('jumlah','Jumlah','required');
 
     if($this->form_validation->run() == TRUE)
     {
-      $id_transaksi = $this->input->post('id_transaksi',TRUE);
-      $tanggal      = $this->input->post('tanggal',TRUE);
-      $lokasi       = $this->input->post('lokasi',TRUE);
-      $kode_barang  = $this->input->post('kode_barang',TRUE);
-      $nama_barang  = $this->input->post('nama_barang',TRUE);
-      $satuan       = $this->input->post('satuan',TRUE);
-      $jumlah       = $this->input->post('jumlah',TRUE);
+      $id_transaksi   = $this->input->post('id_transaksi',TRUE);
+      $delivery_order = $this->input->post('delivery_order',TRUE);
+      $tanggal        = $this->input->post('tanggal',TRUE);
+      $lokasi         = $this->input->post('lokasi',TRUE);
+      $tipe_barang    = $this->input->post('tipe_barang',TRUE);
+      $nama_barang    = $this->input->post('nama_barang',TRUE);
+      $serial_number  = $this->input->post('serial_number',TRUE);
+      $nomor_aset     = $this->input->post('nomor_aset',TRUE);
+      //$jumlah         = $this->input->post('jumlah',TRUE);
 
       $data = array(
-            'id_transaksi' => $id_transaksi,
-            'tanggal'      => $tanggal,
-            'lokasi'       => $lokasi,
-            'kode_barang'  => $kode_barang,
-            'nama_barang'  => $nama_barang,
-            'satuan'       => $satuan,
-            'jumlah'       => $jumlah
+            'id_transaksi'    => $id_transaksi,
+            'serial_number'   => $serial_number,
+            'delivery_order'  => $delivery_order,
+            'tanggal'         => $tanggal,
+            'lokasi'          => $lokasi,
+            'tipe_barang'     => $tipe_barang,
+            'nama_barang'     => $nama_barang,
+            'nomor_aset'      => $nomor_aset,
+            //'jumlah'          => $jumlah
       );
       $this->M_admin->insert('tb_barang_masuk',$data);
 
